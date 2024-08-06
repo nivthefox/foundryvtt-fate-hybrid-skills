@@ -43,8 +43,9 @@
     {
       "name": "Kevin Kragenbrink",
       "email": "kevin@writh.net",
-      "discord": "nivthefox",
-      "flags": {}
+      "discord": "nivthefox"
     }
-  ]
+  ],
+  "manifest": "https://raw.githubusercontent.com/nivthefox/foundryvtt-fate-hybrid-skills/main/module.json",
+  "download": "https://github.com/nivthefox/foundryvtt-fate-hybrid-skills/archive/refs/heads/main.zip"
 }
