@@ -1,0 +1,50 @@
+{
+  "id": "fate-hybrid-skills",
+  "title": "Fate Hybrid Skills",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "fate-core-official",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
+  "esmodules": [
+    "fhs.js",
+    "scripts/Actor.js",
+    "scripts/ApproachSetup.js",
+    "scripts/Constants.js",
+    "scripts/EditApproach.js",
+    "scripts/EditGMApproaches.js",
+    "scripts/EditPlayerApproaches.js",
+    "scripts/Hooks.js",
+    "scripts/Log.js",
+    "scripts/Models.js",
+    "scripts/Settings.js"
+  ],
+  "styles": [
+    "./assets/style.css"
+  ], 
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "description": "A hack for Fate Core which allows characters to use both approaches (from FAE) and skills (from Core) together.",
+  "authors": [
+    {
+      "name": "Kevin Kragenbrink",
+      "email": "kevin@writh.net",
+      "discord": "nivthefox",
+      "flags": {}
+    }
+  ]
+}

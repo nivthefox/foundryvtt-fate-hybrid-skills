@@ -1,0 +1,34 @@
+<form onsubmit="event.preventDefault();">
+    <table style="width:auto" cellspacing="4" cellpadding="4">
+        <tr>
+            <td>
+                <div style="display: flex; align-items: center; justify-content: space-around;">
+                    <input type="text" style="flex-grow: 0; flex-basis: 75%;" id="approachesLabel" class="approach_box" value="{{this.approaches_label}}" disabled>
+                    <span id="approachesLabelEdit" data-edit-element="approachesLabel" style="flex-grow: 0; flex-basis: 10%" aria-label="Edit approaches label." class="fas fa-edit"></span>
+                </div>
+            </td>
+            <td>
+                <select id="approachesListBox" size = "25" style="background: white; color: black; font-family: var(--fco-font-family); width: 150px; height: 250px">
+                    {{#each approaches}}
+                        <option style="background:white; color:black; font-family: var(--fco-font-family);">
+                            {{this.name}}
+                        </option>
+                    {{/each}}
+                </select>
+            </td>
+            <td>
+                <button buttontype="button" id="editApproach">{{localize 'fate-core-official.Edit'}}</button><p></p>
+                <button buttontype="button" id="deleteApproach">{{localize 'fate-core-official.Delete'}}</button><p></p>
+                <button buttontype="button" id="copyApproach">{{localize 'fate-core-official.Copy'}}</button><p></p>
+                <button buttontype="button" id="exportApproach">{{localize 'fate-core-official.Export'}}</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <button type="button" id="addApproach">{{localize 'fate-hybrid-skills.applications.approachSetup.new'}}</button>
+                <button type="button" id="importApproaches">{{localize 'fate-hybrid-skills.applications.approachSetup.import'}}</button>
+                <button type="button" id="exportApproaches">{{localize 'fate-hybrid-skills.applications.approachSetup.export'}}</button>
+            </td>
+        </tr>
+    </table>
+</form>

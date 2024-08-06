@@ -1,0 +1,48 @@
+<div class="mfate-panel--approaches fate-hybrid-skills-panel">
+    <div class="mfate-panel__header">
+        <div class="mfate-panel__header-label">{{ approachesLabel }}</div>
+        {{#if GM}}
+        <div class="fas fa-plus mfate-panel__header-button" title="{{localize 'fate-hybrid-skills.applications.quickAddApproach.alt'}}" name="quick_add_approach" i="" icon=""></div>
+        {{/if}}
+        <div name="sort_player_approaches" i icon class="fas fa-sort mfate-panel__header-button" title="{{localize 'fate-core-official.SwitchSort'}}"></div>
+        {{#if this.document.isOwner}} <div title="{{localize 'fate-hybrid-skills.applications.sheetApproaches.edit'}}" name="edit_player_approaches" i icon class="fas fa-cog mfate-panel__header-button"></div>{{/if}}
+    </div>
+    <div name="approaches_body" id="approaches_body" class="mfate-panel__body">
+        <ul class="mfate-skills-list">
+            {{#if actor.sortApproachesByRank}} 
+            {{#each approachesByRank}}
+            {{#unless this.hidden}}
+            <li class="mfate-skills-list__item">
+                <div class="mfate-skills-list__number">{{this.rank}}</div>
+                <div class="mfate-skills-list__adjective">({{lookup ../ladder this.rank}})</div>
+                <div class="mfate-skills-list__skill-name mf_draggable" name="approach" id="approach_{{this.name}}" {{#if ../GM}}draggable="true"{{/if}} data-mfdtype="skill" data-mfname="{{this.name}}" data-mfactorid="{{../document.id}}">
+                    {{this.name}} 
+                    {{#if ../this.document.isOwner}}
+                    <input type="radio" name="selected_approach" style="float:right" value="{{this.name}}" />
+                    {{/if}}
+                    {{#if this.extra_id}}
+                        <i data-extra_id="{{this.extra_id}}" class="fas fa-plug fu_button" style="float:right; padding-right:10px;" title="{{fco_item_name_from_id ../this.document this.extra_id}}"></i>
+                    {{/if}}
+                </div>
+            </li>
+            {{/unless}}
+            {{/each}} 
+            {{else}} 
+            {{#each approachesByName}}
+            {{#unless this.hidden}}
+            <li class="mfate-skills-list__item">
+                <div class="mfate-skills-list__number">{{this.rank}}</div>
+                <div class="mfate-skills-list__adjective">({{lookup ../ladder this.rank}})</div>
+                <div class="mfate-skills-list__skill-name mf_draggable" name="approach" id="approach_{{this.name}}" {{#if ../GM}}draggable="true"{{/if}} data-mfdtype="skill" data-mfname="{{this.name}}" data-mfactorid="{{../document.id}}">
+                    {{this.name}} 
+                    {{#if ../this.document.isOwner}}
+                    <input type="radio" name="selected_approach" style="float:right" value="{{this.name}}" />
+                    {{/if}}
+                    {{#if this.extra_id}}<i data-extra_id="{{this.extra_id}}" class="fas fa-plug fu_button" style="float:right; padding-right:10px;" title="{{fco_item_name_from_id ../this.document this.extra_id}}"></i>{{/if}}
+                </div>
+            </li>
+            {{/unless}}
+            {{/each}} {{/if}}
+        </ul>
+    </div>
+</div>

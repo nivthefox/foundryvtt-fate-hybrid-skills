@@ -1,0 +1,74 @@
+<form onsubmit="event.preventDefault();">
+    <table style="width:800" "height:750" cellspacing ="4" cellpadding="4">
+        <tr>
+            <td width="100">
+                {{localize 'fate-hybrid-skills.approach'}}:
+            </td>
+            <td>
+                <input type="text" id ="edit_approach_name" name="name" style="background: white; color: black; font-family: var(--fco-font-family);" value="{{approach.name}}"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{localize 'fate-core-official.Description'}}:
+            </td>
+            <td>
+                <div name="description" id="edit_approach_description_rich" tabindex = "0" style="min-height:1.5em; background: white; color: black; font-family: var(--fco-font-family);">{{{rich.description}}}</div>
+                <div name="description" data-edit="description" id="edit_approach_description" style="display: none; background: white; color: black; font-family: var(--fco-font-family);">{{{approach.description}}}</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{localize 'fate-core-official.Overcome'}}:
+            </td>
+            <td>
+                <div name="overcome" id="edit_approach_overcome_rich" tabindex = "0" style="min-height:1.5em; background: white; color: black; font-family: var(--fco-font-family);">{{{rich.overcome}}}</div>
+                <div name="overcome" data-edit="overcome" id="edit_approach_overcome" style="display:none; background: white; color: black; font-family: var(--fco-font-family);">{{{approach.overcome}}}</div>
+            </td>   
+        </tr>
+        <tr>
+            <td>
+                {{localize 'fate-core-official.CAA'}}:
+            </td>
+            <td>
+                <div name="caa" id="edit_approach_caa_rich" tabindex = "0" style="min-height:1.5em; background: white; color: black; font-family: var(--fco-font-family);">{{{rich.caa}}}</div>
+                <div name="caa" data-edit="caa" id="edit_approach_caa" style="display:none; background: white; color: black; font-family: var(--fco-font-family);">{{{approach.caa}}}</div>
+            </td>   
+        </tr>
+        <tr>
+            <td>
+                {{localize 'fate-core-official.Attack'}}:
+            </td>
+            <td>
+                <div name="attack" id="edit_approach_attack_rich" tabindex = "0" style="min-height:1.5em; background: white; color: black; font-family: var(--fco-font-family);">{{{rich.attack}}}</div>
+                <div name="attack" data-edit="attack" id="edit_approach_attack" style="display:none; background: white; color: black; font-family: var(--fco-font-family);">{{{approach.attack}}}</div>
+            </td>   
+        </tr>
+        <tr>
+            <td>
+                {{localize 'fate-core-official.Defend'}}:
+            </td>
+            <td>
+                <div name="defend" id="edit_approach_defend_rich" tabindex = "0" style="min-height:1.5em; background: white; color: black; font-family: var(--fco-font-family);">{{{rich.defend}}}</div>
+                <div name="defend" data-edit="defend" id="edit_approach_defend" style="display:none; background: white; color: black; font-family: var(--fco-font-family);">{{{approach.defend}}}</div>
+            </td>   
+        </tr>
+        <tr>
+            <td>
+                {{localize 'fate-core-official.PCSkill'}}:
+            </td>
+            <td>
+                {{#if approach.pc}}
+                <input name="pc" type="checkbox" id="edit_pc" checked></input>
+                {{else}}
+                <input type="checkbox" id="edit_pc"></input>
+                {{/if}}
+            </td>   
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" id="edit_save_changes">{{localize 'fate-core-official.SaveChanges'}}</button>
+            </td>
+        </tr>
+    </table>
+</form>

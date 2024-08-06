@@ -1,0 +1,10 @@
+.fate-hybrid-skills-wrapper {
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.fate-hybrid-skills-panel {
+    flex: 50%;
+    padding-right: 1%;
+}

@@ -1,0 +1,89 @@
+{
+    "fate-hybrid-skills": {
+        "approach": "Approach",
+        "approachRank": "Approach rank",
+        "applications": {
+            "approachSetup": {
+                "title": "Setup Approaches for world",
+                "new": "Add New Approach",
+                "import": "Import Approach(es)",
+                "export": "Export Approach(es)"
+            },
+            "editApproach": {
+                "title": "Approach Editor",
+                "noBlankNames": "You cannot have an approach with a blank name"
+            },
+            "editGMApproaches": {
+                "title": "GM Approach Editor",
+                "titleForExtra": "Approach editor for extra",
+                "titleForToken": "GM Approach editor for [Token]",
+                "titleFor": "GM Approach editor for",
+
+                "adHocAdd": "Ad-hoc approach to add",
+                "adHocApproaches": "Ad-hoc approaches present on this character",
+                "addRemoveApproaches": "Add checked approaches and remove unchecked approaches",
+                "checkAll": "Check all approaches",
+                "nonPCApproaches": "Non-PC world approaches that can be added",
+                "orphanedApproaches": "Orphaned approaches on this character but not on the world",
+                "uncheckAll": "Uncheck all approaches",
+                "worldApproachesAbsent": "World approaches absent from this character",
+                "worldApproachesPresent": "World approaches present on this character"
+            },
+            "editPlayerApproaches": {
+                "title": "Approach Editor",
+                "titleForExtra": "Approach editor for extra",
+                "titleForToken": "Approach editor for [Token]",
+                "titleFor": "Approach editor for",
+                "manuallyEditExtras": "Manually edit Extra approaches (GM only)",
+                "manuallyEditPlayer": "Manually edit player approaches (GM only)",
+                "onlyGMs": "Only GMs can manually edit player approaches.",
+                "saved": "Approaches Saved",
+                "savedExtra": "Extra Approaches Saved",
+                "unableToSave": "Unable to save because this character violates the approach cap."
+            },
+            "exportApproach": {
+                "title": "Copy & Paste this to save this approach"
+            },
+            "exportApproaches": {
+                "title": "Copy & Paste this to save your approaches"
+            },
+            "importApproaches": {
+                "title": "Paste data here; replaces approaches of the same name"
+            },
+            "quickAddApproach": {
+                "alt": "Quickly add an ad-hoc approach.",
+                "description": "Ad-hoc Approach",
+                "name": "Approach Name",
+                "rank": "Approach Rank"
+            },
+            "sheetApproaches": {
+                "edit": "Open the Approach Editor",
+                "noApproachSelected": "Select an approach before rolling."
+            }
+        },
+        "settings": {
+            "approaches": {
+                "name": "Approaches List",
+                "hint": "This is the list of approaches for this particular world."
+            },
+            "approachesLabel": {
+                "name": "Approaches Label",
+                "hint": "The label used on the character sheet for the Approaches section. If left empty, will default to 'Approaches'.",
+                "default": "Approaches"
+            },
+            "replaceApproaches": {
+                "name": "Override World Approaches?",
+                "hint": "Pick an approach set with which to override the world's current approaches. CANNOT BE UNDONE."
+            },
+            "sortApproaches": {
+                "name": "Sort approaches on sheets by rank?",
+                "hint": ""
+            },
+            "ApproachSetup": {
+                "name": "Setup Approaches",
+                "label": "Setup",
+                "hint": "Configure this world's approach list."
+            }
+        }
+    }
+}

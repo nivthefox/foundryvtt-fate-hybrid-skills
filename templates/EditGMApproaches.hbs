@@ -1,0 +1,118 @@
+<form class="editable" onsubmit="event.preventDefault();">
+<div style="max-height:75vh; overflow-y:auto">
+    <table style="border:none; background:none">
+    <tr>
+        <td colspan="2">
+            <hr><h3>{{localize 'fate-hybrid-skills.applications.editGMApproaches.worldApproachesPresent'}}</h3><hr>
+        </td>
+    </tr>
+    {{#each presentApproaches}}
+    {{#if (eq this.extra_id undefined)}}
+    <tr>
+        <td style="width:100px">
+            <input type="checkbox" class="skill_check_box" checked id="{{this.name}}" name="{{this.name}}_present"}>
+        </td>
+        <td style="width:100%">
+            {{this.name}}
+        </td>
+    </tr>
+    {{else}}{{/if}}
+    {{/each}}
+    <tr>
+            <td colspan="2">
+                <hr><h3>{{localize 'fate-hybrid-skills.applications.editGMApproaches.orphanedApproaches'}}</h3><hr>
+            </td>
+        </tr>
+        {{#each orphanedApproaches}}
+        {{#if (eq this.extra_id undefined)}}
+        <tr>
+            <td style="width:100px">
+                <input type="checkbox" class="skill_check_box" checked id="{{this.name}}" name="{{this.name}}_present"}>
+            </td>
+            <td>
+                {{this.name}}
+            </td>
+        </tr>
+        {{else}}{{/if}}
+        {{/each}}
+        <tr>
+            <td colspan="2">
+                <hr><h3>{{localize 'fate-hybrid-skills.applications.editGMApproaches.adHocApproaches'}}</h3><hr>
+            </td>
+        </tr>
+    {{#each adHocApproaches}}
+    {{#if (eq this.extra_id undefined)}}
+    <tr>
+        <td style="width:100px">
+            <input type="checkbox" class="skill_check_box" checked id="{{this.name}}" name="{{this.name}}_present"}>
+        </td>
+        <td>
+            <input type="text" style="width:95%;" name="adhoc_skill_name" value="{{this.name}}" data-oldName="{{this.name}}"></input>
+        </td>
+    </tr>
+    {{else}}{{/if}}
+    {{/each}}
+    <tr>
+        <td colspan="2">
+            <hr><h3>{{localize 'fate-hybrid-skills.applications.editGMApproaches.worldApproachesAbsent'}}</h3><hr>
+        </td>
+    </tr>
+    {{#each absentApproaches}}
+    <tr>
+        <td>
+            <input type="checkbox" class="skill_check_box" id="{{this.name}}" name="{{this.name}}_present"}>
+        </td>
+        <td>
+            {{this.name}}
+        </td>
+    </tr>
+    {{/each}}
+    <tr>
+        <td colspan="2">
+            <hr><h3>{{localize 'fate-hybrid-skills.applications.editGMApproaches.nonPCApproaches'}}<h3></h3><hr>
+        </td>
+    </tr>
+    {{#each non_pc}}
+    <tr>
+        <td>
+            <input type="checkbox" class="skill_check_box" id="{{this.name}}" name="{{this.name}}_present"}>
+        </td>
+        <td>
+            {{this.name}}
+        </td>
+    </tr>
+    {{/each}}
+    </table>
+</div>
+<table style="background:none; border:none">
+    <tr>
+        <td>
+            {{localize 'fate-hybrid-skills.applications.editGMApproaches.adHocAdd'}}:
+        </td>
+        <td>
+            <input name="ad_hoc_input" type="text" id="ad_hoc_input" style="width:80%">&nbsp&nbsp<button style="width:30px; height:30px;"" type="button" id="add_ah_button" i icon class="fas fa-plus"></button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="button" id="select_all_approaches_button">
+                {{localize 'fate-hybrid-skills.applications.editGMApproaches.checkAll'}}
+            </button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="button" id="deselect_all_approaches_button">
+                {{localize 'fate-hybrid-skills.applications.editGMApproaches.uncheckAll'}}
+            </button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="button" id="add_remove_button">
+                {{localize 'fate-hybrid-skills.applications.editGMApproaches.addRemoveApproaches'}}
+            </button>
+        </td>
+    </tr>
+</table>
+</form>
