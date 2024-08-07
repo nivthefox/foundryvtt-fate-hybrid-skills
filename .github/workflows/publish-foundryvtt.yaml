@@ -14,9 +14,9 @@ jobs:
         with:
           node-version: '22.x'
       # install deps
-      - run: npm ci
-      # build sass, pack packs, run rollup
-      - run: npm run build
+      # - run: npm ci
+      # # build sass, pack packs, run rollup
+      # - run: npm run build
 
       # Substitute the Manifest and Download URLs in the module.json
       - name: Substitute Manifest and Download Links For Versioned Ones
