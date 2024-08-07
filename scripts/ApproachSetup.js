@@ -194,4 +194,22 @@ export class ApproachSetup extends FormApplication {
         await game.settings.set(Constants.MODULE_ID, 'approaches', approaches);
         this.render(false);
     }
+
+    async onLabelEdit(event, html, editLabel) {
+        const inputId = `#${editLabel.data('edit-element')}`;
+        const inputBox = html.find(inputId);
+        const isEditing = editLabel.hasClass('inactive');
+        if (inputBox.length && !isEditing) {
+            editLabel.addClass('inactive');
+            inputBox.removeAttr('disabled')
+                .focus()
+                .on('blur.edit_label', async () => {
+                    inputBox.attr('disabled', 'disabled');
+                    inputBox.off('blur.edit_label');
+                    const value = inputBox.val();
+                    await game.settings.set(Constants.MODULE_ID, 'approachesLabel', value);
+                    editLabel.removeClass('inactive');
+                });
+        }
+    }
 }
