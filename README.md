@@ -14,9 +14,9 @@ This work is based on Fate Condensed (found at http://www.faterpg.com/), a produ
 3. Character Sheet
 
 ## 1 What is Fate Hybrid Skills?
-Fate Hybrid Skills is a FoundryVTT module which adds support to the [Fate Core Official](https://foundryvtt.com/packages/fate-core-official) package for FoundryVTT.  It is based on the article [What You Do and How You Do It: Merging Fate Core and Accelerated](https://fate-srd.com/fate-codex/what-you-do-and-how-you-do-it-merging-fate-core-and-accelerated) by Alexandre Malette, from "Fate Codex, Volume 3,  Issue 2".
+Fate Hybrid Skills is a FoundryVTT module which adds support to the [Fate Core Official](https://foundryvtt.com/packages/fate-core-official) package for FoundryVTT.  It is based on the article [What You Do and How You Do It: Merging Fate Core and Accelerated](https://fate-srd.com/fate-codex/what-you-do-and-how-you-do-it-merging-fate-core-and-accelerated) by Alexandre Malette, from "Fate Codex, Volume 3,  Issue 2", and on the blog post entitled [Two Column Fate](https://walkingmind.evilhat.com/2014/03/12/two-column-fate/) by Rob Donoghue.
 
-This module allows you to add approaches and skills to your sheet in separate categories. Whenever you attempt to roll a Skill, you select an approach to use with that skill.  Game Masters are encouraged to read the Fate Codex article referenced above, in order to understand the implications of having both Approaches and Skills on their player's sheets.
+This module allows you to add a second skill column to your sheet--usually Approaches. Whenever you attempt to roll a skill, you select the accompanying skill from the left column before rolling with the right.  Game Masters are encouraged to read the Fate Codex article and blog post, referenced above, in order to understand the implications of having two skill columns on their player's sheets.
 
 ## 2 System Settings
 When you first enable the Fate Hybrid Skills module, it will be a blank slate. To get it ready for play, you'll need to set it up in the Foundry system settings.
