@@ -1,0 +1,15 @@
+{
+  "name": "fate-hybrid-skills",
+  "version": "0.1.0",
+  "description": "See module.json",
+  "main": "fhs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/nivthefox/foundryvtt-fate-hybrid-skills"
+  },
+  "author": "Kevin Kragenbrink <kevin@writh.net>",
+  "license": "GPL-3.0"
+}

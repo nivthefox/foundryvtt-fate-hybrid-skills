@@ -7,4 +7,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v0.1.0](https://github.com/nivthefox/foundryvtt-fate-hybrid-skills/releases/tag/v0.1.0)
 ### Added
-- This is an MVP for two-column fate or merged FAE and Core, with working Aspects and Skills.  
+- This is an MVP for two-column fate or merged FAE and Core, with working Aspects and Skills.
