@@ -21,8 +21,6 @@ export async function createActorApproaches(actor, data, options, userid) {
 }
 
 export async function init() {
-    CONFIG.debug.hooks = true;
-    CONFIG.debug.sits = true;
     CONFIG.Actor.documentClass = Actor;
 
     Log.debug("Initialized");
