@@ -142,7 +142,7 @@ export class ApproachSetup extends FormApplication {
         let key = this.getSelectedApproachKey(html);
         let approach = this.getSelectedApproach(html);
         let text = `{"${key}": ${JSON.stringify(approach, null, 5)}}`;
-        const content = renderTemplate(`modules/${Constants.MODULE_ID}/templates/ImportExportApproaches.hbs`, {mode: 'export', text});
+        const content = await renderTemplate(`modules/${Constants.MODULE_ID}/templates/ImportExportApproaches.hbs`, {mode: 'export', text});
         new Dialog({
             title: game.i18n.localize("fate-hybrid-skills.applications.exportApproach.title"),
             content,
@@ -153,7 +153,7 @@ export class ApproachSetup extends FormApplication {
     async onExportAllButton(event, html) {
         let approaches = game.settings.get(Constants.MODULE_ID, 'approaches');
         let text = JSON.stringify(approaches, null, 5);
-        const content = renderTemplate(`modules/${Constants.MODULE_ID}/templates/ImportExportApproaches.hbs`, {mode: 'export', text});
+        const content = await renderTemplate(`modules/${Constants.MODULE_ID}/templates/ImportExportApproaches.hbs`, {mode: 'export', text});
         new Dialog({
             title: game.i18n.localize("fate-hybrid-skills.applications.exportApproaches.title"),
             content,

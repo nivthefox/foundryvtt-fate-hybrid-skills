@@ -7,7 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 ### Fixed
-- A missing import was breaking the ability to edit skills on a sheet
+- Approaches can now be exported (individually or all at once)
+- Approaches can now be edited on the sheet as intended, rather than causing a ReferenceError
 
 ## [v0.1.2](https://github.com/nivthefox/foundryvtt-fate-hybrid-skills/releases/tag/v0.1.2)
 ### Fixed
