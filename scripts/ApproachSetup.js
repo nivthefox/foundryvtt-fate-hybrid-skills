@@ -86,10 +86,11 @@ export class ApproachSetup extends FormApplication {
     }
 
     async onAddButton(event, html) {
-        let edit = new EditApproach();
-        edit.render(true);
+        let editor = new EditApproach();
+        editor.render(true);
+        editor.setupWindow = this;
         try {
-            edit.bringToTop();
+            editor.bringToTop();
         } catch {
             // Do nothing.
         }
@@ -129,10 +130,11 @@ export class ApproachSetup extends FormApplication {
     async onEditButton(event, html) {
         // Lanch the EditApproach FormApplication.
         let approach = this.getSelectedApproach(html);
-        let edit = new EditApproach(approach);
-        edit.render(true);
+        let editor = new EditApproach(approach);
+        editor.render(true);
+        editor.setupWindow = this;
         try {
-            edit.bringToTop();
+            editor.bringToTop();
         } catch {
             // Do nothing.
         }

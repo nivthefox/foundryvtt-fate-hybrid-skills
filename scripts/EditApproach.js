@@ -124,5 +124,8 @@ export class EditApproach extends FormApplication {
             approaches[fcoConstants.tob64(approach.name)] = newApproach;
         }
         await game.settings.set(Constants.MODULE_ID, "approaches", approaches);
+        if (this.setupWindow != undefined) {
+            await this.setupWindow.render(false);
+        }
     }
 }
