@@ -5,11 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## [v0.1.4](https://github.com/nivthefox/foundryvtt-fate-hybrid-skills/releases/tag/v0.1.4)
 ### Fixed
 - Newly added approaches now update the list in the Approach Setup window.
 
-## [v0.1.3](https://github.com/nivthefox/foundryvtt-fate-hybrid-skills/releases/tag/v0.1.2)
+## [v0.1.3](https://github.com/nivthefox/foundryvtt-fate-hybrid-skills/releases/tag/v0.1.3)
 ### Fixed
 - Approaches can now be exported (individually or all at once)
 - Approaches can now be edited on the sheet as intended, rather than causing a ReferenceError
