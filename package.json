@@ -1,6 +1,6 @@
 {
   "name": "fate-hybrid-skills",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "See module.json",
   "main": "fhs.js",
   "scripts": {
