@@ -1,4 +1,4 @@
-import {Approach} from './Models.js';
+import { Approach } from './Models.js';
 import * as Constants from './Constants.js';
 
 export class EditApproach extends FormApplication {

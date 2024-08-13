@@ -1,6 +1,6 @@
 import * as Constants from "./Constants.js";
 import * as Log from "./Log.js";
-import {ApproachSetup} from "./ApproachSetup.js";
+import { ApproachSetup } from "./ApproachSetup.js";
 
 export function registerSettings() {
     game.settings.register(Constants.MODULE_ID, "approachesLabel", {

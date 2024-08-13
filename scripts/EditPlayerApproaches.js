@@ -1,5 +1,5 @@
 import * as Constants from './Constants.js';
-import {EditGMApproaches} from './EditGMApproaches.js'
+import { EditGMApproaches } from './EditGMApproaches.js'
 
 export class EditPlayerApproaches extends FormApplication {
     constructor(...args) {

@@ -1,4 +1,4 @@
-import {Actor} from './Actor.js';
+import { Actor } from './Actor.js';
 import * as Constants from './Constants.js';
 import * as Log from './Log.js';
 
