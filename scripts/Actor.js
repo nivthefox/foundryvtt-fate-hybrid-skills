@@ -2,6 +2,7 @@ import { Approach } from './Models.js';
 import * as Constants from './Constants.js';
 import { EditPlayerApproaches } from './EditPlayerApproaches.js';
 import { fcoActor } from '../../../systems/fate-core-official/scripts/fcoActor.js';
+import { Warn } from "./Helper";
 
 export class Actor extends fcoActor {
     async rollSkill(skillName) {
@@ -11,7 +12,7 @@ export class Actor extends fcoActor {
         const approach = fcoConstants.gbn(actor.getFlag(Constants.MODULE_ID, 'approaches'), this.selectedApproach);
 
         if (!approach) {
-            ui.notifications.warn(game.i18n.localize("fate-hybrid-skills.applications.sheetApproaches.noApproachSelected"));
+            Warn(game.i18n.localize("fate-hybrid-skills.applications.sheetApproaches.noApproachSelected"));
             return;
         }
 

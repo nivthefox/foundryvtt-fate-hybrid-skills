@@ -1,6 +1,7 @@
 import { Approach } from './Models.js';
 import { EditApproach } from './EditApproach.js';
 import * as Constants from './Constants.js';
+import * as Helper from './Helper.js';
 
 export class ApproachSetup extends FormApplication {
     constructor(...args) {
@@ -99,7 +100,7 @@ export class ApproachSetup extends FormApplication {
     async onCopyButton(event, html) {
         let approach = this.getSelectedApproach(html);
         if (approach == undefined) {
-            ui.notifications.error(game.i18n.localize("fate-core-official.SelectASkillToCopyFirst"));
+            Helper.Error(game.i18n.localize("fate-core-official.SelectASkillToCopyFirst"));
             return;
         }
 
@@ -169,7 +170,7 @@ export class ApproachSetup extends FormApplication {
         try {
             importData = JSON.parse(text);
         } catch(e) {
-            ui.notifications.error(e);
+            Helper.Error(e);
             return;
         }
 

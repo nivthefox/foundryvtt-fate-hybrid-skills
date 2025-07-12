@@ -1,5 +1,6 @@
 import * as Constants from './Constants.js';
-import { EditGMApproaches } from './EditGMApproaches.js'
+import { EditGMApproaches } from './EditGMApproaches.js';
+import * as Helper from './Helper.js';
 
 export class EditPlayerApproaches extends FormApplication {
     constructor(...args) {
@@ -70,7 +71,7 @@ export class EditPlayerApproaches extends FormApplication {
 
         if (this.object.type == 'Extra') {
             await this.object.setFlag(Constants.MODULE_ID, "approaches", this.playerApproaches);
-            ui.notifications.info(game.i18n.localize("fate-hybrid-skills.applications.editPlayerApproaches.savedExtra"));
+            Helper.Info(game.i18n.localize("fate-hybrid-skills.applications.editPlayerApproaches.savedExtra"));
             this.changed = false;
             this.close();
             return;
@@ -79,13 +80,13 @@ export class EditPlayerApproaches extends FormApplication {
         const isPlayer = this.object.hasPlayerOwner;
         const canSave = await this.checkApproaches(this.playerApproaches);
         if (!game.user.isGM && isPlayer && !canSave) {
-            ui.notifications.error(game.i18n.localize("fate-hybrid-skills.applications.editPlayerApproaches.unableToSave"))
+            Helper.Error(game.i18n.localize("fate-hybrid-skills.applications.editPlayerApproaches.unableToSave"))
             return;
         } 
 
         // todo: setup tracks (see fco/EditPlayerSkills:91-93)
         await this.object.setFlag(Constants.MODULE_ID, "approaches", this.playerApproaches);
-        ui.notifications.info(game.i18n.localize("fate-hybrid-skills.applications.editPlayerApproaches.saved"));
+        Helper.Info(game.i18n.localize("fate-hybrid-skills.applications.editPlayerApproaches.saved"));
         this.changed = false;
         this.close();
     }
@@ -190,7 +191,7 @@ export class EditPlayerApproaches extends FormApplication {
 
     async onClickEdit(event, el) {
         if (!game.user.isGM && !this.object.type == 'Extra') {
-            ui.notifications.error(game.i18n.localize("fate-hybrid-skills.applications.editPlayerApproaches.onlyGMs"));
+            Helper.Error(game.i18n.localize("fate-hybrid-skills.applications.editPlayerApproaches.onlyGMs"));
             return;
         }
     
