@@ -1,7 +1,7 @@
 {
     "id": "fate-hybrid-skills",
     "title": "Fate Hybrid Skills",
-    "version": "v0.1.4",
+    "version": "v0.1.5",
     "compatibility": {
         "minimum": "12",
         "verified": "12"
@@ -47,5 +47,5 @@
         }
     ],
     "manifest": "https://github.com/nivthefox/foundryvtt-fate-hybrid-skills/releases/latest/download/module.json",
-    "download": "https://github.com/nivthefox/foundryvtt-fate-hybrid-skills/releases/download/v0.1.4/module.zip"
+    "download": "https://github.com/nivthefox/foundryvtt-fate-hybrid-skills/releases/download/v0.1.5/module.zip"
 }
